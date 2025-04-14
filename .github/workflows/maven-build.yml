@@ -36,11 +36,11 @@ jobs:
 
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: java-app-jar
 
-      - name: Deploy Step (Replace with actual deployment)
+      - name: Deploy Step 
         run: |
           echo "Simulating deployment..."
           ls -lh

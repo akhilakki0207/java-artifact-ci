@@ -27,5 +27,20 @@ jobs:
     - name: Archive the JAR
       uses: actions/upload-artifact@v4
       with:
-        name: java-app
-        path: target/*.jar
+          name: java-app
+          path: target/*.jar
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: java-app-jar
+
+      - name: Deploy Step (Replace with actual deployment)
+        run: |
+          echo "Simulating deployment..."
+          ls -lh
